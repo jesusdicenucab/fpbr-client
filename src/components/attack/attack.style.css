@@ -1,0 +1,19 @@
+.attack-container {
+  width: 50%;
+  height: 50%;
+  background-color: #0000003f;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Alfa Slab One';
+  font-size: 28px;
+  color: #fff;
+}
+
+.separator {
+  background-color: #fff;
+  width: 5%;
+  height: 5px;
+  margin: 0 50px;
+}

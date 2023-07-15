@@ -1,0 +1,13 @@
+li {
+  list-style: none;
+}
+
+.list-title {
+  margin-bottom: 20px;
+}
+
+.player-text {
+  font-family: 'Alfa Slab One';
+  font-size: 20px;
+  color: #ffffff41;
+}

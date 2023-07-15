@@ -1,0 +1,14 @@
+.main-component {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.on-battlefield {
+  font-family: 'Alfa Slab One';
+  font-size: 32px;
+  color: #fff;
+}

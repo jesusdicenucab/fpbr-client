@@ -1,1 +1,10 @@
-// export * from './'
+export * from './page-container/page-container.component';
+export * from './head/head.component';
+export * from './menu/menu.component';
+export * from './main/main.component';
+export * from './attack/attack.component';
+export * from './controls/controls.component';
+export * from './players-list/players-list.component';
+export * from './footer/footer.component';
+export * from './timer/timer.component';
+export * from './attacks-list/attack-list.component';

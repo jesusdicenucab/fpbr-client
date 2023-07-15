@@ -1,0 +1,29 @@
+.footer {
+  position: relative;
+  top: 50px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.turn-timer-container {
+  position: relative;
+  left: 90px;
+  text-align: center;
+}
+
+.text {
+  font-family: 'Alfa Slab One';
+  font-size: 20px;
+  color: #fff;
+}

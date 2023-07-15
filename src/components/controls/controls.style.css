@@ -1,0 +1,53 @@
+.controls {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 30px;
+}
+
+.control-button {
+  width: 150px;
+  font-family: 'Alfa Slab One';
+  font-size: 28px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.control-input {
+  width: 200px;
+  background: none;
+  outline: none;
+  text-align: center;
+  font-family: 'Alfa Slab One';
+  font-size: 28px;
+  color: #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #fff 2px;
+}
+
+.attack-controls {
+  text-align: center;
+}
+
+.attack-not-valid {
+  border-bottom: solid #810202 2px;
+}
+
+.attack-is-not-valid {
+  font-family: 'Alfa Slab One';
+  font-size: 20px;
+  color: #810202;
+  position: fixed;
+}

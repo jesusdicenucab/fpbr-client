@@ -1,0 +1,18 @@
+.header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.header-container {
+  display: 50%;
+}
+
+.room-name {
+  font-family: 'Alfa Slab One';
+  letter-spacing: 2px;
+  font-size: 50px;
+}

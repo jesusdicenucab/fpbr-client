@@ -1,0 +1,25 @@
+.attacks-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100px;
+}
+
+li {
+  list-style: none;
+}
+
+.attacks-text {
+  font-family: 'Alfa Slab One';
+  font-size: 20px;
+  color: #ffffff41;
+}
+
+.attacks-box {
+  text-align: center;
+  padding: 5px;
+  border: solid #ffffff41 3px;
+  border-radius: 7px;
+  overflow-y: auto;
+}
