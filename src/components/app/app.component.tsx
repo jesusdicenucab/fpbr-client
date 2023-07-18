@@ -12,7 +12,7 @@ interface IProps {
   children: ReactNode;
 }
 
-export const ApplicationComponent = async ({children}: IProps) => {
+export const ApplicationComponent = ({children}: IProps) => {
 
   const {username} = useParams();
 
