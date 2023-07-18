@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 import './timer.style.css';
+import { useSelector } from 'react-redux';
+import { RootState } from "../../store";
 
 export const TimerComponent = () => {
+
   const [timer, setTimer] = useState(120); // Inicia el cronómetro con 2 minutos (120 segundos)
+
+  const {isFetching} = useSelector((state: RootState) => state.fetching);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -21,7 +26,9 @@ export const TimerComponent = () => {
 
   return (
     <div className='timer'>
-      {minutos}:{segundos < 10 ? '0' : ''}{segundos} {/* Muestra el tiempo restante en formato MM:SS */}
+    {
+      isFetching ? <span>Waiting for others players to attack</span>: `${{minutos}}:${segundos < 10 ? '0' : ''}${segundos}}`
+    }
     </div>
   );
 }

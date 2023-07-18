@@ -1,36 +1,21 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { connect } from 'socket.io-client';
-import { HeadComponent, PageContainer, MainComponent, FooterComponent } from "../../components";
-import { websocketUrl } from '../../config';
-
-const connectSocketServer = () => {
-  const socket = connect(websocketUrl, {
-    transports: ['websocket']
-  });
-  return socket;
-}
+// import { useParams } from 'react-router-dom';
+import { useState } from "react";
+import { HeadComponent, PageContainer, MainComponent, FooterComponent, ModalComponent, ApplicationComponent } from "../../components";
 
 function IndexPage(): JSX.Element {
 
-  const {id} = useParams();
-
-  const [ socket ] = useState(connectSocketServer());
-
-  socket.emit('connect-to-backend', `QLQ MANO TU ERES LOCO ${id}`);
-
-  useEffect(() => {
-    socket.on('message', (data: any) => {
-      console.log(data);
-      return () => {socket.off('message')}
-    });
-  }, [ socket ]);
+  const [modalOpen, setModalOpen] = useState<boolean>(true);
 
   return (
     <PageContainer>
-      <HeadComponent />
-      <MainComponent />
-      <FooterComponent />
+    { modalOpen ?
+      <ModalComponent isOpen={modalOpen} onClose={setModalOpen}/> :
+      <ApplicationComponent>
+        <HeadComponent />
+        <MainComponent />
+        <FooterComponent />
+      </ApplicationComponent>
+    }
     </PageContainer>
   );
 }

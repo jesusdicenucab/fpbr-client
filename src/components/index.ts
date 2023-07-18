@@ -8,3 +8,5 @@ export * from './players-list/players-list.component';
 export * from './footer/footer.component';
 export * from './timer/timer.component';
 export * from './attacks-list/attack-list.component';
+export * from './modal/modal.component';
+export * from './app/app.component';

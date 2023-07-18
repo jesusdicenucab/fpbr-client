@@ -1,8 +1,11 @@
+import { RootState } from '../../store';
 import './players-list.style.css';
-
-const players = ['ARGENTINA', 'POLONIA', 'ALEMANIA', 'INGLATERRA'];
+import { useSelector } from 'react-redux';
 
 export const PlayersListComponent = () => {
+
+  const {players} = useSelector((state: RootState) => state.players);
+
   return (
     <ul className='players-list'>
       <li key={0} className='list-title'>
@@ -12,7 +15,7 @@ export const PlayersListComponent = () => {
         players.map( (player, index) => {
           return (
             <li key={index + 1}>
-              <p className='player-text players-title'>{player}</p>
+              <p className='player-text players-title'>{player.username}</p>
             </li>
           )
         })

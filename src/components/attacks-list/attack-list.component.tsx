@@ -1,40 +1,12 @@
 import { useRef, WheelEvent } from 'react';
+import {useSelector} from 'react-redux';
 import './attack-list.style.css';
+import { RootState } from '../../store';
 
-const attacks = [
-  {
-    attacker: 'ARGENTINA',
-    defendant: 'INGLATERRA',
-    attack: '12456: 3D | 1I',
-  },
-  {
-    attacker: 'INGLATERRA',
-    defendant: 'ALEMANIA',
-    attack: '12456: 3D | 1I',
-  },
-  {
-    attacker: 'ALEMANIA',
-    defendant: 'POLONIA',
-    attack: '12456: 3D | 1I',
-  },
-  {
-    attacker: 'POLONIA',
-    defendant: 'ARGENTINA',
-    attack: '12456: 3D | 1I',
-  },
-  {
-    attacker: 'ARGENTINA',
-    defendant: 'INGLATERRA',
-    attack: '12456: 3D | 1I',
-  },
-  {
-    attacker: 'ARGENTINA',
-    defendant: 'INGLATERRA',
-    attack: '12456: 3D | 1I',
-  }
-]
 
 export const AttacksListComponent = () => {
+
+  const {attacks} = useSelector((state: RootState) => state.attacks);
 
   const miRef = useRef<HTMLDivElement>(null);
 
@@ -51,8 +23,8 @@ export const AttacksListComponent = () => {
         attacks.map((attack, index) => {
           return (
             <li key={index}>
-              <p className='attacks-text'>{`${attack.attacker} - ${attack.defendant}`}</p>
-              <p className='attacks-text'>{attack.attack}</p>
+              <p className='attacks-text'>{`${attack.attack_player} - ${attack.defender_player}`}</p>
+              <p className='attacks-text'>{`${attack.attack_number} - D: ${attack.deaths} | I: ${attack.deaths}`}</p>
             </li>
           );
         })

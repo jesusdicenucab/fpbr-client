@@ -3,7 +3,7 @@ import {IndexPage} from '../pages';
 
 export const routes = createBrowserRouter([
   {
-    path: '/:id',
+    path: '/:id/:username',
     element: <IndexPage />
   }
 ]);
